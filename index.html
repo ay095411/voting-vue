@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+	<link rel="icon" type="image/png" href="http://cxsj1.com/assets/i/favicon.png">
+    <style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+		}
+		body {
+			font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
+			font-weight: 400;
+			color: #333;
+		}
+        .xx-svg__global {
+            position: fixed;
+            z-index: 9999999;
+            background: #fff;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .xx-svg__global svg {
+            width: 64px;
+            height: 64px;
+            animation: rotate 1.2s infinite linear;
+        }
+        .xx-svg__global svg path {
+            fill: #fec14d;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="xx-svg__global">
+        <svg viewBox="0 0 1024 1024" width="128" height="128">
+            <path d="M512 64c247.2 0 448 200.8 448 448h-64c0-212-172-384-384-384V64z m0 832c-212 0-384-172-384-384H64c0 247.2 200.8 448 448 448v-64z"></path>
+        </svg>
+    </div>
+    <div id="app"></div>
+</body>
+</html>
