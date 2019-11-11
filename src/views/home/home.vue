@@ -162,7 +162,6 @@
 				} else {
 					e.number++;
 					e.flag = true;
-					console.log(this.list)
 					let num = 0;
 					this.list.forEach((item, index) => {
 						num += item.number;
@@ -189,7 +188,7 @@
 				num += item.number; //累加计算总数
 			})
 			this.statistics.zps = num; //总票数
-			this.statistics.lll = this.$cookies.get('counter'); //统计
+			this.statistics.lll = this.$cookies.get('counter') || num; //统计
 
 			//获取活动结束时间
 			let endTime = this.endTime + ' 18:59:00';
