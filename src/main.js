@@ -9,11 +9,11 @@ import VueCookies from 'vue-cookies'
 import ElementUI from 'element-ui';
 import {
 	Toast,
-	Pagination
+	Pagination,
+	NoticeBar
 } from 'vant';
 import 'vant/lib/index.css';
 import 'element-ui/lib/theme-chalk/index.css';
-import '../utils/statistics.js';
 
 import Tab from './components/tab/tab.vue' //导航
 
@@ -24,6 +24,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(Toast);
 Vue.use(Pagination);
+Vue.use(NoticeBar)
 Vue.use(VueRouter)
 Vue.use(VueCookies)
 Vue.component('wTab', Tab) //全局组件注册

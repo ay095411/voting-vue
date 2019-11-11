@@ -1,14 +1,7 @@
 <template>
-	<div>
+	<div class="home">
 		<!-- 头部跑马灯 -->
-		<el-row>
-			<el-col :span="24">
-				<div class="grid-content">
-					<i class="el-icon-bell"></i>
-					<myMarquee :lists="lists"></myMarquee>
-				</div>
-			</el-col>
-		</el-row>
+		<van-notice-bar :text="lists" left-icon="volume-o" />
 		<!-- 背景图片 -->
 		<el-row>
 			<el-col :span="24">
@@ -109,7 +102,6 @@
 </template>
 
 <script>
-	import myMarquee from '../../components/my-marquee/my-marquee.vue'
 	import {
 		publicMethod
 	} from "../../../utils/pubilc.js";
@@ -117,10 +109,7 @@
 		data() {
 			return {
 				//头部滚动字幕
-				lists: [
-					'2019首届黑龙江省哈尔滨市呼兰县A-9“诚信商家”的评选大赛特别提示:本次活动、公平、公正、公开、此活动免费报名，免费参与，本次活动主要是宣传推广，增加商家人气！本次评选大赛商家均由黑龙江省哈尔滨市呼兰县市民推荐。',
-					'2019首届黑龙江省哈尔滨市呼兰县A-9“诚信商家”的评选大赛特别提示:本次活动、公平、公正、公开、此活动免费报名，免费参与，本次活动主要是宣传推广，增加商家人气！本次评选大赛商家均由黑龙江省哈尔滨市呼兰县市民推荐。'
-				],
+				lists: '2019首届黑龙江省哈尔滨市呼兰县A-9“诚信商家”的评选大赛特别提示:本次活动、公平、公正、公开、此活动免费报名，免费参与，本次活动主要是宣传推广，增加商家人气！本次评选大赛商家均由黑龙江省哈尔滨市呼兰县市民推荐。',
 				//统计数据
 				statistics: {
 					cysj: 46,
@@ -164,9 +153,6 @@
 				endTime: '2019-12-01',
 				timer: null, //活动结束时间
 			}
-		},
-		components: {
-			myMarquee
 		},
 		methods: {
 			//投票按钮
@@ -220,12 +206,13 @@
 </script>
 
 <style scoped="scoped" lang="less">
-	.grid-content {
+	.van-notice-bar {
 		position: absolute;
+		width: 100%;
 		top: 0;
 		left: 0;
 		height: 14px;
-		padding: 6px 0 6px 6px;
+		padding: 6px 0;
 		font-size: 12px;
 		overflow: hidden;
 		background: rgba(0, 0, 0, 0.6);
@@ -233,10 +220,14 @@
 		z-index: 4;
 		display: flex;
 		align-items: center;
+		
+	}
 
-		& .el-icon-bell {
-			margin-right: 10px;
-		}
+	.home /deep/ .van-notice-bar__content {
+		text-indent: 120px !important;
+	}
+	.home /deep/ .van-notice-bar__left-icon {
+		margin: 0 6px !important;
 	}
 
 	.banner-carousel {
