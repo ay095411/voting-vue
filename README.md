@@ -16,6 +16,8 @@
 ![](http://49.235.173.225/images/index.png)
 ![](http://49.235.173.225/images/index2.png)
 
+----------
+
 ### 进入项目 安装依赖文件
 npm install
 
