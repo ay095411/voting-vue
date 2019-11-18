@@ -11,13 +11,16 @@
 - 封装了axios 安装依赖引入即可
 - 创建了utils公用方法
 
+## 效果图
 
+![](http://49.235.173.225/images/index.png)
+![](http://49.235.173.225/images/index2.png)
 
-# install dependencies
+### 进入项目 安装依赖文件
 npm install
 
-# serve with hot reload at localhost:8888
+### 启动成功访问 localhost:8888
 npm run dev
 
-# build for production with minification
+### 生产环境打包
 npm run build
